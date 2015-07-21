@@ -1,0 +1,28 @@
+#signup {
+  text-align: center;
+}
+
+#home {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+  border-width: 5px;
+  border-style:solid;
+  width: 300px;
+  margin:0 auto;
+  margin-top: 10px;
+  background: gold;
+}
+
+#bg {
+
+background-image: url(/images/lh.jpg);
+border-style:solid;
+border-radius:10px;
+border-width:5px;
+width:400px;
+margin:0 auto;
+margin-top:20px;
+
+}

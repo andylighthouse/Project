@@ -1,1 +1,75 @@
-signup.erb
+<body id="bg">
+  <header>
+    <h1 id="signup">Sign Up Now</h1> 
+  </header>
+
+  <section>
+    <form method="post" action="/signup">
+     
+      <div>
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first_name" placeholder="First Name">
+      </div><br>
+
+      <div>
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last_name" placeholder="Last Name">
+      </div><br>  
+
+
+      <div>
+        <label for= "username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username">
+      </div><br>
+
+      <div>
+      <label for="Email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Email">
+      </div><br>
+
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password">
+      </div><br>
+
+      <div>
+        <label for="password-confirmation">Confirm Password:</label>
+        <input type="password" id="password-confirmation" name="password_confirmation" placeholder="Password">
+      </div><br>
+
+      <div>
+        <label>Gender:</label>
+        Male <input type="radio" value="male" name="gender">
+        Female <input type="radio" value="female" name="gender">
+      </div><br>
+
+      <div>
+        <label>Country:</label>
+        <select name="country">
+          <option>Please Select</option>
+          <option value="Canada">Canada</option>
+          <option value="USA">USA</option>
+          <option value="China">China</option>
+          <option value="France">France</option>
+          <option value="Germany">Germany</option>
+        </select>
+      </div><br>
+
+      <input type="submit" class="btn btn-info"/>
+
+    </form>
+
+
+
+
+
+
+
+
+
+    
+  </section>
+
+
+</body>
+  
