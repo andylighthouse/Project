@@ -1,4 +1,4 @@
-#signup {
+.title {
   text-align: center;
 }
 
@@ -15,14 +15,35 @@
   background: gold;
 }
 
-#bg {
+#signup {
 
-background-image: url(/images/lh.jpg);
 border-style:solid;
 border-radius:10px;
 border-width:5px;
 width:400px;
 margin:0 auto;
 margin-top:20px;
-
+padding-left:70px;
+padding-top:10px;
+padding-bottom:10px;
 }
+
+.bg {
+  background-image: url(/images/lh.jpg);
+}
+
+#submit1 {
+  padding-left:90px;
+}
+
+#login {
+  text-align:center;
+  padding-top:20px;
+}
+
+#smiley {
+  max-height: 100px;
+  margin-top: 20px;
+  
+}
+
