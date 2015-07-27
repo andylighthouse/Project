@@ -1,4 +1,11 @@
-# require "pry"
+require "pry"
+
+helpers do 
+  def current_user
+    @current_user = User.find_by(id: session[:user_id]) if session[:user_id]
+  end
+end
+
 
 # Homepage (Root path)
 get "/" do
@@ -46,13 +53,15 @@ post "/login" do
   if user
     session[:user_id] = user.id
     redirect "/"
-
   else
-    redirect "/signup"
+    erb :signup
   end
 end
 
-
+get "/logout" do
+  session.clear
+  redirect "/login"
+end
 
 
 

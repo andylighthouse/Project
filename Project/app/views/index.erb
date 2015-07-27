@@ -1,3 +1,21 @@
+<head>
+<title><% @title="Home"%></title>
+</head>
+
+
 <body class="bg">
   <h1 id="home">Andy's Movie Collection</h1>
+  
+    <section>
+    
+      <% if current_user%>
+      <a href="/movies/new">Add Movie</a><br>
+      <a href="/.....">Find Movie</a><br>
+      <a href="/.....">Update Movie</a><br>
+      <a href="/.....">Delete Movie</a><br>
+
+      <%end%>
+    </section>
 </body>
+
+
