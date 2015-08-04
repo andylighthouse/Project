@@ -6,13 +6,14 @@
 <body class="bg">
   <h1 id="home">Andy's Movie Collection</h1>
   
-    <section>
+    <section id="edit">
     
       <% if current_user%>
-      <a href="/movies/new">Add Movie</a><br>
-      <a href="/.....">Find Movie</a><br>
-      <a href="/.....">Update Movie</a><br>
-      <a href="/.....">Delete Movie</a><br>
+      <h2 id="welcome"> Hello, <%= current_user.first_name%></h2>
+      <a href="/movies/new" class="font"><b>Add Movie</b></a><br>
+      <a href="/....." class="font"><b>Find Movie</b></a><br>
+      <a href="/....." class="font"><b>Update Movie</b></a><br>
+      <a href="/....." class="font"><b>Delete Movie</b></a><br>
 
       <%end%>
     </section>

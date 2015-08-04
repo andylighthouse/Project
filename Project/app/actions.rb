@@ -64,7 +64,9 @@ get "/logout" do
 end
 
 
-
+get "/movies/new" do
+  erb :new_movies
+end
 
 
 

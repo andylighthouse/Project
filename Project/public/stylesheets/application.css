@@ -15,6 +15,11 @@
   background: gold;
 }
 
+#home:hover {
+  background-color: lightblue;
+  color: white;
+}
+
 #signup {
 
 border-style:solid;
@@ -41,14 +46,40 @@ padding-bottom:10px;
   padding-top:20px;
 }
 
-#smiley {
-  max-height: 100px;
-  margin-top: 20px;
-  
-}
 
 #user{
   float:left;
 }
 
+.font:hover {
+  color: gold;
+  text-decoration: none;
+}
 
+.font{
+  text-decoration: none;
+  color:black;
+  
+}
+
+#smiley {
+  max-height: 100px;
+  margin-top: 20px;
+}
+
+#smiley:hover {
+  /*-ms-transform: rotate(+20deg);
+  -webkit-transform: rotate(+20deg);
+  -moz-transform: rotate(+20deg);
+  -o-transform: rotate(+20deg);*/
+  transform: rotate(+20deg);
+}
+
+#edit{
+  margin-top: 20px;
+  text-align: center;
+}
+
+#enter{
+  text-align: center
+}
