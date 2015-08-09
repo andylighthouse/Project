@@ -20,17 +20,14 @@
 
 
 <body>
- <div id="user">
-  <%if current_user%>
-    <a href="/logout" class= "btn btn-danger" >Logout</a>
-  <%else%>
-    <a href="/login">Please Login</a>
-  <%end%>
+  <div id="user">
+    <%if current_user%>
+      <a href="/logout" class= "btn btn-danger" >Logout</a>
+    <%else%>
+      <a href="/login" class= "btn btn-info">Please Login</a>
+    <%end%>
   </div>
-
   <%=yield%>
-
-
-
 </body>
+
 </html>

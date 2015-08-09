@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> <% @title="Movie" %></title>
+</head>
+
+<body class='bg'>
+
+<div class="container">
+
+
+ <div class="row">
+    <img src="<%= @movie.poster %>"/>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>You have added <%= @movie.title %> to the database!</h3>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

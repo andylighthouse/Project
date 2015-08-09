@@ -81,5 +81,15 @@ padding-bottom:10px;
 }
 
 #enter{
+  text-align: right;
+  
+}
+
+
+#newmoviesubmit{
+  text-align: right
+}
+
+#submitadd{
   text-align: center
 }

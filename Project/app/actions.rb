@@ -65,8 +65,44 @@ end
 
 
 get "/movies/new" do
-  erb :new_movies
+  erb :'movies/new'
 end
+
+post "/movies/new" do
+  title = params[:title]
+  year = params[:year]
+  gross = params[:gross]
+  poster = params[:poster]
+  trailer = params[:trailer]
+
+  if title && year && gross && poster && trailer
+    movie = Movie.find_by(title: title)
+    if movie
+      redirect :'/movies/new'
+    end
+  elsif
+    erb :'/movies/new'
+  
+    
+  else
+    movie = Movie.new(title: title, year: year, gross: gross, poster: poster, trailer: trailer)
+    if movie.save  
+    redirect "/movies/#{movie.id}" 
+    end
+
+
+    end   
+end
+
+
+
+
+get "/movies/:id" do
+  @movie = Movie.find(params[:id])
+  erb :'movies/movie'
+end
+
+
 
 
 
