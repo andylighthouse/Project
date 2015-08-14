@@ -97,13 +97,35 @@ get "/movies/:id" do
 end
 
 
-get "/movies/:id/players/new" do
+
+get "/movies/:id/reviews/new" do
   @movie = Movie.find(params[:id])
-  erb :'players/new'
+  erb :'reviews/new'
+end
+
+post "/movies/:id/reviews/new" do
+
+comment = params[:comment]
+rating =  params[:rating]
+recommend = params[:recommend]
+
+movie = Movie.find(params[:id])
+if movie
+
+  review = movie.reviews.new(comment: comment, rating: rating, recommend: recommend)
+  if movie.reviews.save
+  redirect "/movies/#{movie.id}/reviews/#{review.id}"
+  end
+else
+  redirect "/movies/#{movie.id}/reviews/new"
+end
 end
 
 
 
+get 'movies/:id/reviews/:review_:id' do
+  erb :'reviews/review'
+end
 
 
 

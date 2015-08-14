@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>
+    <%@title="Add Player"%>
+  </title>
+</head>
+
+
+<body class="bg">
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <h1 class="title">Add Review</h1>
+    </div>
+  </div><br>
+
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <form method="post" action="/movies/<%=@movie.id%>/reviews/new">
+
+      <label for="comment">Comment:</label><br>
+      <textarea rows="8" cols="50" id="comment" name="comment"></textarea>
+
+      <label for="rating">Rating:</label>
+      <input type="range" id="rating" name="rating" min="0" max="10"><br>
+
+      <label>Recommend:</label><br>
+      Yes:<input type="radio" name="recommend" value="yes">
+      No:<input type="radio" name="recommend" value="no"><br>
+
+      <div id="submitreview">
+      <button type="submit" class="btn btn-info">Add</button>
+      </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
