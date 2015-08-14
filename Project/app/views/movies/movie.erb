@@ -7,19 +7,30 @@
 <body class='bg'>
 
 <div class="container">
+  <div id="showmovie">
+  <h3><%= @movie.title %></h3>
+  
 
-
- <div class="row">
-    <img src="<%= @movie.poster %>"/>
+  <div class="row">
+    <img src="<%= @movie.poster %>" id="poster1"/>
   </div>
 
   <div class="row">
     <div class="col-md-12">
-      <h3>You have added <%= @movie.title %> to the database!</h3>
-    </div>
+      <h4> Year: <%= @movie.year %></h4>
+      <h4> Gross: $<%= @movie.gross %></h4>
+      
+      <iframe width="420" height="345"
+      src="<%= @movie.trailer %>">
+      </iframe>
   </div>
+  </div>
+</div>
 
+<div>
 
+<a href="/movies/<%=@movie.id%>/players/new" class= "btn btn-info">Add Review</a>
+</div>
 
 </body>
 </html>

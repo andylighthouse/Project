@@ -75,21 +75,19 @@ post "/movies/new" do
   poster = params[:poster]
   trailer = params[:trailer]
 
-  if title && year && gross && poster && trailer
-    movie = Movie.find_by(title: title, year: year, gross: gross)
-    if movie
-    redirect "/movies/#{movie.id}" 
+  if title.length > 0 && year.length > 0 && gross.length > 0 && poster.length > 0 && trailer.length > 0
+      movie = Movie.new(title: title, year: year, gross: gross, poster: poster, trailer: trailer) 
+      if movie.save
+      redirect "/movies/#{movie.id}" 
+      else
+        erb :'movies/new'
+      end
   else
-  erb :'/movies/new'
-  end  
-
-  elsif
-  movie = Movie.new(title: title, year: year, gross: gross, poster: poster, trailer: trailer)
-    if movie.save  
-    redirect "/movies/#{movie.id}" 
-    end
+    erb :'movies/new'
   end
 end
+
+
 
 
 
@@ -99,7 +97,10 @@ get "/movies/:id" do
 end
 
 
-
+get "/movies/:id/players/new" do
+  @movie = Movie.find(params[:id])
+  erb :'players/new'
+end
 
 
 
