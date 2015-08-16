@@ -1,1 +1,36 @@
-review.erb
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    <% @title="Review"%>
+  </title>
+</head>
+
+
+<body class="bg">
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <h1 class="title">Review</h1>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <div id="review">
+      <h2><%=@movie.title%></h2>
+      <image src="<%=@movie.poster%>">
+      <h3 id="ta">Comment: <%=@review.comment%></h3><br>
+      <h3>Rating: <%=@review.rating%></h3><br>
+      <h3>Recommend: <%=@review.recommend%></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

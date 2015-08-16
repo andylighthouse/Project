@@ -113,7 +113,7 @@ movie = Movie.find(params[:id])
 if movie
 
   review = movie.reviews.new(comment: comment, rating: rating, recommend: recommend)
-  if movie.reviews.save
+  if review.save
   redirect "/movies/#{movie.id}/reviews/#{review.id}"
   end
 else
@@ -123,7 +123,9 @@ end
 
 
 
-get 'movies/:id/reviews/:review_:id' do
+get '/movies/:id/reviews/:review_id' do
+  @review = Review.find(params[:review_id])
+  @movie = Movie.find(params[:id])
   erb :'reviews/review'
 end
 
