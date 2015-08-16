@@ -129,7 +129,10 @@ get '/movies/:id/reviews/:review_id' do
   erb :'reviews/review'
 end
 
-
+get "/movies" do
+  @movies = Movie.all.reverse
+  erb :'movies/display'
+end
 
 
 

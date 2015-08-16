@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%=@title="Movies"%></title>
+</head>
+
+<body class="bg">
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <h1 class="title">Movies</h1>
+    </div>
+  </div>
+
+<div class="review">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <% @movies.each do |movie|%>
+      <h3><%= movie.title%></h3>
+      <image src="<%=movie.poster%>" class="poster1">
+      <% end%>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>

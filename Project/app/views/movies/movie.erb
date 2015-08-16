@@ -12,7 +12,7 @@
   
 
   <div class="row">
-    <img src="<%= @movie.poster %>" id="poster1"/>
+    <img src="<%= @movie.poster %>" class="poster1"/>
   </div>
 
   <div class="row">
@@ -26,12 +26,18 @@
   </div>
   </div><br>
 
+    <div>
+    <h3><% @movie.reviews.each do |review| %>
+    <bold id="bold">Comment: <%= review.comment%></bold>
+    <% end %></h3>
+    </div>
 
-  <div id=>
+  <div>
   <a href="/movies/<%=@movie.id%>/reviews/new" class= "btn btn-info">Add Review</a>
   </div>
-
 </div>
+
+
 
 </body>
 </html>
