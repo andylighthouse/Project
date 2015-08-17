@@ -6,6 +6,9 @@ helpers do
   end
 end
 
+before do
+  redirect '/login' if !current_user && request.path != '/login' && request.path !='/signup'
+end
 
 # Homepage (Root path)
 get "/" do

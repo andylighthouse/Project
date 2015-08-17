@@ -25,12 +25,11 @@
 border-style:solid;
 border-radius:10px;
 border-width:5px;
-width:400px;
-margin:0 auto;
-margin-top:20px;
-padding-left:70px;
-padding-top:10px;
-padding-bottom:10px;
+padding-top: 20px;
+padding-bottom: 20px
+
+
+
 }
 
 .bg {
@@ -38,7 +37,7 @@ padding-bottom:10px;
 }
 
 #submit1 {
-  padding-left:90px;
+  text-align: center
 }
 
 #login {
@@ -122,4 +121,39 @@ padding-bottom:10px;
 
 #bold{
   color:blue;
+}
+
+.field{
+  margin-left: 10px;
+  width: 200px;
+}
+
+.field1{
+  float:left;
+  text-align: right;
+  width: 250px;
+  
+}
+
+#gender{
+  margin-right: 20px
+}
+
+
+#gender1{
+  margin-right: 20px;
+  float:left;
+  text-align: right;
+  width:250px;
+}
+
+#country1{
+  float:left;
+  text-align: right;
+  width:250px;
+}
+
+#country{
+  margin-left: 10px;
+  margin-bottom: 20px;
 }
